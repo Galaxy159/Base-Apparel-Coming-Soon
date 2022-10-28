@@ -25,6 +25,9 @@ h1 {
 .container {
   max-width: 144rem;
   margin: 0 auto;
+  background-color: #fafafa;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
 }
 
 .attribution {
@@ -37,8 +40,8 @@ h1 {
 
 .component {
   display: grid;
-  grid-template-columns: minmax(0, 16.5rem) 1fr minmax(0, 22rem) -webkit-max-content;
-  grid-template-columns: minmax(0, 16.5rem) 1fr minmax(0, 22rem) max-content;
+  grid-template-columns: minmax(0, 16.5rem) 1fr minmax(0, 22rem) -webkit-min-content;
+  grid-template-columns: minmax(0, 16.5rem) 1fr minmax(0, 22rem) min-content;
   grid-template-rows: repeat(3, -webkit-min-content) 1fr;
   grid-template-rows: repeat(3, min-content) 1fr;
   margin-bottom: 10rem;
@@ -49,13 +52,74 @@ h1 {
 }
 .component__logo {
   grid-column: 2/3;
+  margin-top: 6.5rem;
+  margin-bottom: 13.6rem;
 }
 .component__headline {
+  line-height: 7.1rem;
+  letter-spacing: 1.73206rem;
+  color: #423a3a;
   grid-column: 2/3;
+  margin-bottom: 3.2rem;
+}
+.component__headline span {
+  color: #ce9898;
+  font-weight: 300;
 }
 .component__text {
   grid-column: 2/3;
+  color: #ce9898;
+  line-height: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
 }
 .component__email {
   grid-column: 2/3;
+  position: relative;
+}
+.component__email--input {
+  width: 44.5rem;
+  height: 5.6rem;
+  border-radius: 2.8rem;
+  border: 2px solid #f96464;
+  padding-left: 3.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #423a3a;
+  margin-bottom: 0.4rem;
+}
+.component__email--input::-moz-placeholder {
+  color: #ce9898;
+}
+.component__email--input:-ms-input-placeholder {
+  color: #ce9898;
+}
+.component__email--input::placeholder {
+  color: #ce9898;
+}
+.component__email--error-sign {
+  position: absolute;
+  right: 11.6rem;
+  top: 1.6rem;
+}
+.component__email--btn {
+  position: absolute;
+  width: 10rem;
+  height: 5.6rem;
+  border-radius: 2.8rem;
+  right: 0;
+  top: 0;
+  border: none;
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+  box-shadow: 0 1.5rem 2rem rgba(198, 110, 110, 0.247569);
+}
+.component__email--btn:hover {
+  cursor: url(../images/pointer.svg), auto;
+}
+.component__email--error-msg {
+  line-height: 2.8rem;
+  color: #f96464;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-left: 3.2rem;
 }/*# sourceMappingURL=main.css.map */
