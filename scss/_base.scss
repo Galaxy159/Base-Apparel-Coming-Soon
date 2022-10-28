@@ -42,7 +42,7 @@ h1 {
   background-color: #fafafa;
   background-image: url(../images/bg-pattern-desktop2.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: 0 0;
 
   @include respond(phone) {
