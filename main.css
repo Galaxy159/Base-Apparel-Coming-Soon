@@ -29,9 +29,15 @@ h1 {
   background-image: url(../images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
 }
+@media (max-width: 1060px) {
+  .container {
+    max-width: 37.5rem;
+    height: 80rem;
+  }
+}
 
 .hide {
-  display: none;
+  opacity: 0 !important;
 }
 
 .attribution {
@@ -50,14 +56,38 @@ h1 {
   grid-template-rows: repeat(3, min-content) 1fr;
   margin-bottom: 10rem;
 }
+@media (max-width: 1060px) {
+  .component {
+    width: 37.5rem;
+    grid-template-columns: -webkit-min-content;
+    grid-template-columns: min-content;
+    grid-template-rows: repeat(4, -webkit-min-content) 1fr;
+    grid-template-rows: repeat(4, min-content) 1fr;
+  }
+}
 .component__hero {
   grid-column: 4/5;
   grid-row: 1/-1;
+}
+@media (max-width: 1060px) {
+  .component__hero {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    margin-bottom: 6.4rem;
+  }
 }
 .component__logo {
   grid-column: 2/3;
   margin-top: 6.5rem;
   margin-bottom: 13.6rem;
+}
+@media (max-width: 1060px) {
+  .component__logo {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    margin: 3.2rem;
+    height: 2.89rem;
+  }
 }
 .component__headline {
   line-height: 7.1rem;
@@ -70,6 +100,16 @@ h1 {
   color: #ce9898;
   font-weight: 300;
 }
+@media (max-width: 1060px) {
+  .component__headline {
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    font-size: 4rem;
+    line-height: 4.2rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+}
 .component__text {
   grid-column: 2/3;
   color: #ce9898;
@@ -77,9 +117,28 @@ h1 {
   font-weight: 400;
   margin-bottom: 4rem;
 }
+@media (max-width: 1060px) {
+  .component__text {
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+}
 .component__email {
   grid-column: 2/3;
   position: relative;
+}
+@media (max-width: 1060px) {
+  .component__email {
+    grid-column: 1/-1;
+    grid-row: 5/6;
+    padding: 0 3.2rem;
+  }
 }
 .component__email--input {
   width: 44.5rem;
@@ -92,6 +151,13 @@ h1 {
   color: #423a3a;
   margin-bottom: 0.4rem;
   outline: none;
+}
+@media (max-width: 1060px) {
+  .component__email--input {
+    width: 31.1rem;
+    height: 4.8rem;
+    font-size: 1.4rem;
+  }
 }
 .component__email--input::-moz-placeholder {
   color: #ce9898;
@@ -106,6 +172,14 @@ h1 {
   position: absolute;
   right: 11.6rem;
   top: 1.6rem;
+  opacity: 1;
+  transition: all 0.2s;
+}
+@media (max-width: 1060px) {
+  .component__email--error-sign {
+    top: 1.2rem;
+    right: 10.4rem;
+  }
 }
 .component__email--btn {
   position: absolute;
@@ -117,9 +191,19 @@ h1 {
   border: none;
   background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
   box-shadow: 0 1.5rem 2rem rgba(198, 110, 110, 0.247569);
+  transition: all 0.2s;
+}
+@media (max-width: 1060px) {
+  .component__email--btn {
+    height: 4.8rem;
+    width: 64px;
+    right: 3.2rem;
+  }
 }
 .component__email--btn:hover {
   cursor: url(../images/pointer.svg), auto;
+  opacity: 0.5;
+  box-shadow: 0px 1.5rem 2rem rgba(198, 110, 110, 0.7);
 }
 .component__email--error-msg {
   line-height: 2.8rem;
@@ -127,4 +211,6 @@ h1 {
   font-size: 1.3rem;
   font-weight: 400;
   margin-left: 3.2rem;
+  opacity: 1;
+  transition: all 0.1s;
 }/*# sourceMappingURL=main.css.map */

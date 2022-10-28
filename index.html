@@ -23,11 +23,13 @@
   <body>
     <div class="container">
       <main class="component">
-        <img
-          src="./images/hero-desktop.jpg"
-          alt="hero"
-          class="component__hero"
-        />
+        <picture class="component__hero">
+          <source
+            media="(max-width: 1060px)"
+            srcset="./images/hero-mobile.jpg"
+          />
+          <img src="./images/hero-desktop.jpg" alt="hero" />
+        </picture>
         <img
           src="./images/logo.svg"
           alt="BASE APPAREL LOGO"
@@ -62,16 +64,15 @@
           </p>
         </form>
       </main>
-      <footer>
-        <p class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="#">Your Name Here</a>.
-        </p>
-      </footer>
     </div>
-
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Galaxy159</a>.
+      </p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

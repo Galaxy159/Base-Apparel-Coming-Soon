@@ -7,6 +7,7 @@ $color-neutral: #423a3a;
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: 1060px) {
+      @content;
     }
   }
 }
@@ -41,10 +42,15 @@ h1 {
   background-color: #fafafa;
   background-image: url(../images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
+
+  @include respond(phone) {
+    max-width: 37.5rem;
+    height: 80rem;
+  }
 }
 
 .hide {
-  display: none;
+  opacity: 0 !important;
 }
 
 .attribution {

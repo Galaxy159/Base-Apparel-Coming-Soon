@@ -6,19 +6,33 @@
   margin-bottom: 10rem;
 
   @include respond(phone) {
-    grid-template-columns: 1fr;
+    width: 37.5rem;
+    grid-template-columns: min-content;
     grid-template-rows: repeat(4, min-content) 1fr;
   }
 
   &__hero {
     grid-column: 4 / 5;
     grid-row: 1 / -1;
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+      margin-bottom: 6.4rem;
+    }
   }
 
   &__logo {
     grid-column: 2 / 3;
     margin-top: 6.5rem;
     margin-bottom: 13.6rem;
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      margin: 3.2rem;
+      height: 2.89rem;
+    }
   }
 
   &__headline {
@@ -32,6 +46,15 @@
       color: $color-primary-1;
       font-weight: 300;
     }
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+      font-size: 4rem;
+      line-height: 4.2rem;
+      text-align: center;
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__text {
@@ -40,11 +63,28 @@
     line-height: 2.8rem;
     font-weight: 400;
     margin-bottom: 4rem;
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+      grid-row: 4 / 5;
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      font-weight: 400;
+      text-align: center;
+      padding: 0 3.2rem;
+      margin-bottom: 3.2rem;
+    }
   }
 
   &__email {
     grid-column: 2 / 3;
     position: relative;
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+      grid-row: 5 / 6;
+      padding: 0 3.2rem;
+    }
 
     &--input {
       width: 44.5rem;
@@ -58,6 +98,12 @@
       margin-bottom: 0.4rem;
       outline: none;
 
+      @include respond(phone) {
+        width: 31.1rem;
+        height: 4.8rem;
+        font-size: 1.4rem;
+      }
+
       &::placeholder {
         color: $color-primary-1;
       }
@@ -67,6 +113,13 @@
       position: absolute;
       right: 11.6rem;
       top: 1.6rem;
+      opacity: 1;
+      transition: all 0.2s;
+
+      @include respond(phone) {
+        top: 1.2rem;
+        right: 10.4rem;
+      }
     }
 
     &--btn {
@@ -79,9 +132,18 @@
       border: none;
       background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
       box-shadow: 0 1.5rem 2rem rgba(198, 110, 110, 0.247569);
+      transition: all 0.2s;
+
+      @include respond(phone) {
+        height: 4.8rem;
+        width: 64px;
+        right: 3.2rem;
+      }
 
       &:hover {
         cursor: url(../images/pointer.svg), auto;
+        opacity: 0.5;
+        box-shadow: 0px 1.5rem 2rem rgba(198, 110, 110, 0.7);
       }
     }
 
@@ -91,6 +153,8 @@
       font-size: 1.3rem;
       font-weight: 400;
       margin-left: 3.2rem;
+      opacity: 1;
+      transition: all 0.1s;
     }
   }
 }
