@@ -30,6 +30,10 @@ h1 {
   background-repeat: no-repeat;
 }
 
+.hide {
+  display: none;
+}
+
 .attribution {
   text-align: center;
 }
@@ -87,6 +91,7 @@ h1 {
   font-weight: 400;
   color: #423a3a;
   margin-bottom: 0.4rem;
+  outline: none;
 }
 .component__email--input::-moz-placeholder {
   color: #ce9898;

@@ -3,6 +3,14 @@ $color-primary-1: #ce9898;
 $color-primary-2: #f96464;
 $color-neutral: #423a3a;
 
+// media query variable:
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 1060px) {
+    }
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -33,6 +41,10 @@ h1 {
   background-color: #fafafa;
   background-image: url(../images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
+}
+
+.hide {
+  display: none;
 }
 
 .attribution {
