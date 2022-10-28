@@ -153,6 +153,7 @@ h1 {
   color: #423a3a;
   margin-bottom: 0.4rem;
   outline: none;
+  background-color: transparent;
 }
 @media (max-width: 1060px) {
   .component__email--input {

@@ -97,6 +97,7 @@
       color: $color-neutral;
       margin-bottom: 0.4rem;
       outline: none;
+      background-color: transparent;
 
       @include respond(phone) {
         width: 31.1rem;
