@@ -28,6 +28,8 @@ h1 {
   background-color: #fafafa;
   background-image: url(../images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0 0;
 }
 @media (max-width: 1060px) {
   .container {
@@ -79,7 +81,7 @@ h1 {
 .component__logo {
   grid-column: 2/3;
   margin-top: 6.5rem;
-  margin-bottom: 13.6rem;
+  margin-bottom: 13rem;
 }
 @media (max-width: 1060px) {
   .component__logo {
@@ -94,7 +96,7 @@ h1 {
   letter-spacing: 1.73206rem;
   color: #423a3a;
   grid-column: 2/3;
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.8rem;
 }
 .component__headline span {
   color: #ce9898;
@@ -144,7 +146,7 @@ h1 {
   width: 44.5rem;
   height: 5.6rem;
   border-radius: 2.8rem;
-  border: 2px solid #f96464;
+  border: 2px solid #ce9898;
   padding-left: 3.2rem;
   font-size: 1.6rem;
   font-weight: 400;
@@ -158,6 +160,9 @@ h1 {
     height: 4.8rem;
     font-size: 1.4rem;
   }
+}
+.component__email--input:focus {
+  border: 2px solid #f96464;
 }
 .component__email--input::-moz-placeholder {
   color: #ce9898;
