@@ -28,7 +28,7 @@ h1 {
   background-color: #fafafa;
   background-image: url(../images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: auto 83rem;
   background-position: 0 0;
 }
 @media (max-width: 1060px) {
